@@ -21,7 +21,7 @@ int main(int argc, const char * argv[]) {
         
         while (YES) {
             
-             NSString *userResponse = [inputCollector inputForPrompt:@"Welcome to Contact List: What would you like do next? choose one option below\nnew - Create a new contact\nlist - List all contacts\nquit - Exit Application"];
+             NSString *userResponse = [inputCollector inputForPrompt:@"Welcome to Contact List: What would you like do next? choose one option below\nnew - Create a new contact\nlist - List all contacts\nshow - Show contact using index\nquit - Exit Application"];
             
             if ([userResponse isEqualToString:@"quit"]) {
                 NSLog(@"Good bye!!!");
@@ -34,11 +34,18 @@ int main(int argc, const char * argv[]) {
                 contact1.email = userEmailInput;
                 
                 NSLog(@"%@ %@", contact1.name, contact1.email);
-                
                 [contactList addContact:contact1];
+                
             }else if ([userResponse isEqualToString:@"list"]) {
                 [contactList printContacts];
+            }else if ([userResponse isEqualToString:@"show"]) {
+                NSString *contactRef = [inputCollector inputForPrompt:@"Enter contact index or reference number"];
+                
+                int contactIndex = [contactRef intValue];
+                [contactList showContact:contactIndex];
             }
+            
+            
         }
         
         

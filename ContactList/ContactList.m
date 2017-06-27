@@ -33,4 +33,11 @@
     
 }
 
+-(void)showContact:(int)contactIndex{
+    Contact *contactName = [self.contactsArray objectAtIndex:contactIndex];
+    
+    NSString *name = contactName.name;
+    NSLog(@"%@", name);
+}
+
 @end

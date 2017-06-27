@@ -13,6 +13,8 @@
 @property (nonatomic, strong) NSMutableArray *contactsArray;
 -(void)addContact:(Contact *)newContact;
 -(void)printContacts;
+-(void)showContact:(int)contactIndex;
+-(void)searchContact:(NSString *)contactInfo;
 
 
 @end
