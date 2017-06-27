@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
 #import "Contact.h"
+#import "ContactList.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         InputCollector *inputCollector = [[InputCollector alloc]init];
         Contact *contact1 = [[Contact alloc]init];
+        ContactList *contactList = [[ContactList alloc] init];
+        
         
         
         while (YES) {
@@ -31,6 +34,10 @@ int main(int argc, const char * argv[]) {
                 contact1.email = userEmailInput;
                 
                 NSLog(@"%@ %@", contact1.name, contact1.email);
+                
+                [contactList addContact:contact1];
+            }else if ([userResponse isEqualToString:@"list"]) {
+                [contactList printContacts];
             }
         }
         

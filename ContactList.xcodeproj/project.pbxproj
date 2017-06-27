@@ -10,6 +10,7 @@
 		301D47971F02F6B200F14082 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D47961F02F6B200F14082 /* main.m */; };
 		301D47A21F02FF5D00F14082 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D47A11F02FF5D00F14082 /* InputCollector.m */; };
 		301D47A51F03060100F14082 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D47A41F03060100F14082 /* Contact.m */; };
+		301D47A81F030A5300F14082 /* ContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 301D47A71F030A5300F14082 /* ContactList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		301D47A11F02FF5D00F14082 /* InputCollector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputCollector.m; sourceTree = "<group>"; };
 		301D47A31F03060100F14082 /* Contact.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
 		301D47A41F03060100F14082 /* Contact.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		301D47A61F030A5300F14082 /* ContactList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactList.h; sourceTree = "<group>"; };
+		301D47A71F030A5300F14082 /* ContactList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				301D47A11F02FF5D00F14082 /* InputCollector.m */,
 				301D47A31F03060100F14082 /* Contact.h */,
 				301D47A41F03060100F14082 /* Contact.m */,
+				301D47A61F030A5300F14082 /* ContactList.h */,
+				301D47A71F030A5300F14082 /* ContactList.m */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				301D47A81F030A5300F14082 /* ContactList.m in Sources */,
 				301D47A21F02FF5D00F14082 /* InputCollector.m in Sources */,
 				301D47A51F03060100F14082 /* Contact.m in Sources */,
 				301D47971F02F6B200F14082 /* main.m in Sources */,
