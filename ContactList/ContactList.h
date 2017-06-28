@@ -14,7 +14,7 @@
 -(void)addContact:(Contact *)newContact;
 -(void)printContacts;
 -(void)showContact:(int)contactIndex;
--(void)searchContact:(NSString *)contactInfo;
+-(void)searchContact:(NSString *)searchKeyword;
 
 
 @end

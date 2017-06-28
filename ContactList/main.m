@@ -14,19 +14,19 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         InputCollector *inputCollector = [[InputCollector alloc]init];
-        Contact *contact1 = [[Contact alloc]init];
+//        Contact *contact1 = [[Contact alloc]init];
         ContactList *contactList = [[ContactList alloc] init];
-        
-        
         
         while (YES) {
             
-             NSString *userResponse = [inputCollector inputForPrompt:@"Welcome to Contact List: What would you like do next? choose one option below\nnew - Create a new contact\nlist - List all contacts\nshow - Show contact using index\nquit - Exit Application"];
+             NSString *userResponse = [inputCollector inputForPrompt:@"Welcome to Contact List: What would you like do next? choose one option below\nnew - Create a new contact\nlist - List all contacts\nshow - Show contact using index\nfind - Search contact by name\nquit - Exit Application"];
             
             if ([userResponse isEqualToString:@"quit"]) {
                 NSLog(@"Good bye!!!");
                 break;
             }else if ([userResponse isEqualToString:@"new"]) {
+                Contact *contact1 = [[Contact alloc]init];
+                
                 NSString *usernameInput = [inputCollector inputForPrompt:@"Enter your username"];
                 contact1.name = usernameInput;
                 
@@ -43,6 +43,10 @@ int main(int argc, const char * argv[]) {
                 
                 int contactIndex = [contactRef intValue];
                 [contactList showContact:contactIndex];
+            }else if ([userResponse isEqualToString:@"find"]) {
+                NSString *findContact = [inputCollector inputForPrompt:@"Enter keyword to search contact name"];
+                
+                [contactList searchContact:findContact];
             }
             
             

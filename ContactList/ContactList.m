@@ -23,14 +23,11 @@
 }
 
 -(void)printContacts {
-    
     int i = 0;
-    
     for (Contact *contactEntry in self.contactsArray) {
         NSLog(@"%d: <%@> (emailAdress: %@)", i, contactEntry.name, contactEntry.email);
         i++;
     }
-    
 }
 
 -(void)showContact:(int)contactIndex{
@@ -39,5 +36,16 @@
     NSString *name = contactName.name;
     NSLog(@"%@", name);
 }
+
+-(void)searchContact:(NSString *)searchKeyword{
+    for (Contact *contact in self.contactsArray) {
+        if ([contact.name containsString:searchKeyword]) {
+            NSLog(@"%@ %@", contact.name, contact.email);
+        }
+    }
+    
+}
+
+
 
 @end
